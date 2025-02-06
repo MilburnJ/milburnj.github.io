@@ -1,100 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name - Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header id="header">
-    <nav class="navbar">
-      <div class="logo">Your Name</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
 
-  <!-- Home Section -->
-  <section id="home" class="section home-section">
-    <div class="container">
-      <div class="home-content">
-        <!-- Replace 'your-image.jpg' with your own picture -->
-        <img src="your-image.jpg" alt="Your Name" class="profile-pic" />
-        <h1>Hello, I'm Your Name</h1>
-        <p>
-          Welcome to my personal portfolio. I'm a passionate developer and designer,
-          excited to share my work with you.
-        </p>
-      </div>
-      <div class="about-me">
-        <h2>About Me</h2>
-        <p>
-          This is a short introduction about yourself. You can mention your background,
-          interests, and what motivates you to create and code. Customize this section
-          with your own story!
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <!-- Project Card 1 -->
-        <div class="project-card">
-          <!-- Replace 'project1.jpg' with a screenshot or image for your project -->
-          <img src="project1.jpg" alt="Project 1" />
-          <div class="project-info">
-            <h3>Project One</h3>
-            <p>A brief description of your first project goes here.</p>
-          </div>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="your-image.jpg" alt="Your Name">
+            <h1>Your Name</h1>
+            <p>Short bio about you. Your expertise, background, or tagline.</p>
+            <a href="https://github.com/yourusername" target="_blank">View My GitHub Profile</a>
         </div>
-        <!-- Project Card 2 -->
-        <div class="project-card">
-          <!-- Replace 'project2.jpg' with your project image -->
-          <img src="project2.jpg" alt="Project 2" />
-          <div class="project-info">
-            <h3>Project Two</h3>
-            <p>A brief description of your second project goes here.</p>
-          </div>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- Main Content -->
+    <main class="content">
+        <section>
+            <h2>Portfolio</h2>
+            <h3>Data Science</h3>
+            
+            <article class="project">
+                <a href="https://github.com/yourusername/project1" target="_blank">
+                    <h4>Project Title 1</h4>
+                </a>
+                <img src="project1.jpg" alt="Project 1">
+                <p>Brief description of the project goes here.</p>
+            </article>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </div>
-  </footer>
+            <article class="project">
+                <a href="https://github.com/yourusername/project2" target="_blank">
+                    <h4>Project Title 2</h4>
+                </a>
+                <img src="project2.jpg" alt="Project 2">
+                <p>Brief description of the project goes here.</p>
+            </article>
 
-  <script src="script.js"></script>
+            <!-- Add more projects as needed -->
+        </section>
+    </main>
+
 </body>
 </html>
