@@ -8,41 +8,55 @@
 </head>
 <body>
 
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-        <div class="profile">
-            <img src="your-image.jpg" alt="Your Name">
-            <h1>Your Name</h1>
-            <p>Short bio about you. Your expertise, background, or tagline.</p>
-            <a href="https://github.com/yourusername" target="_blank">View My GitHub Profile</a>
-        </div>
-    </aside>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="profilepic.jpeg" alt="Jakeb Milburn">
+                <h1>Jakeb Milburn</h1>
+                <p>Graduate Student in Computer Science | Specializing in Artificial Intelligence, Robotics, and Machine Learning | Experienced in Software Engineering, Computer Vision, and AI Development</p>
+                <a href="https://github.com/milburnj" target="_blank">View My GitHub Profile</a><br>
+                <a href="https://www.linkedin.com/in/jakeb-milburn-23401a208/" target="_blank">View My LinkedIn Profile</a>
+            </div>
+        </aside>
 
-    <!-- Main Content -->
-    <main class="content">
-        <section>
-            <h2>Portfolio</h2>
-            <h3>Data Science</h3>
-            
-            <article class="project">
-                <a href="https://github.com/yourusername/project1" target="_blank">
-                    <h4>Project Title 1</h4>
-                </a>
-                <img src="project1.jpg" alt="Project 1">
-                <p>Brief description of the project goes here.</p>
-            </article>
+        <!-- Main Content -->
+        <main class="content">
+            <section>
+                <h2>Portfolio</h2>
+                
+                <article class="project">
+                    <a href="https://github.com/MilburnJ/SeafloorSegmentation" target="_blank">
+                        <h4>Seafloor Segmentation using Deep Learning: U-Net for Sediment Type Classification
+                        </h4>
+                    </a>
+                    <img src="seafloorimg.png" alt="Project 1">
+                    <p>This project focuses on automated segmentation of the seafloor using deep learning techniques, specifically employing a U-Net model to classify different marine habitats based on side-scan sonar image data. The dataset consists of backscatter and bathymetry data collected from NOAA in Nahant, NH, which was patchified into smaller image tiles to create a structured dataset for training. The primary objective is to train a model that can accurately segment various seafloor features, such as sand, coral, and rocks, and generalize this approach to all underwater environments, enabling broader applications in marine research.
 
-            <article class="project">
-                <a href="https://github.com/yourusername/project2" target="_blank">
-                    <h4>Project Title 2</h4>
-                </a>
-                <img src="project2.jpg" alt="Project 2">
-                <p>Brief description of the project goes here.</p>
-            </article>
+                        <br><br>The segmentation model follows the U-Net architecture, which is widely used for semantic segmentation tasks due to its encoder-decoder structure. The model is designed with three input channels (RGB) and 17 output classes, representing different types of seafloor habitats. The training process is optimized using mini-batch gradient descent, and the dataset is split into 85% training and 15% testing to ensure robust model performance. Images are resized to 224x224 pixels, and data augmentation techniques, such as rotation, flipping, and contrast adjustments, are applied to improve generalization.
+                        
+                        <br><br>The model is trained using the Adam optimizer with a learning rate of 0.0001, a batch size of 32, and 50 epochs. Performance evaluation includes standard segmentation metrics such as Intersection over Union (IoU), Dice Coefficient, and Pixel Accuracy. The results indicate that the model successfully segments different seafloor textures and structures. Visualization of segmentation masks compared to ground truth labels provides insight into model accuracy and areas for potential improvement.
+                        
+                        <br><br>This segmentation system has various real-world applications, including marine conservation, habitat mapping, climate research, and autonomous underwater vehicle (AUV) navigation This project was a culmination of a semester-long research project in the DeepREAL lab at the University of Delaware. A paper published from the same lab in the same domain “SeafloorGenAI: A Large-scale Vision-Language Dataset for Seafloor Geological Survey.”  was later accepted by NeurIPS 2024.
+                        </p>
+                </article>
 
-            <!-- Add more projects as needed -->
-        </section>
-    </main>
+                <article class="project">
+                    <a href="https://github.com/MilburnJ/TwitterSentimentAnalysis" target="_blank">
+                        <h4>Sentiment Analysis on Twitter Data using BERT
+                        </h4>
+                    </a>
+                    <img src="sentiment.jpg" alt="Project 2">
+                    <p>This project applies BERT (Bidirectional Encoder Representations from Transformers) to sentiment analysis on Twitter data, classifying tweets into positive, negative, or neutral sentiments. The dataset consists of labeled tweets stored in a CSV file and accessed via Google Colab. The primary objective is to leverage pre-trained transformer models to improve accuracy in analyzing short, informal social media text.
+                        <br><br>The dataset is first loaded and preprocessed by converting text into BERT-compatible tokenized sequences. The labels are mapped to integers, and exploratory data analysis (EDA) is conducted using Seaborn and Matplotlib to visualize sentiment distribution. The model architecture is based on pre-trained BERT (bert-base-uncased), which is fine-tuned using Cross-Entropy Loss for multi-class classification. The model training is monitored over 50 epochs, and the best-performing model is saved for evaluation.
+                        <br><br>After training, the model achieves a validation accuracy of ~94%, demonstrating strong performance in distinguishing between positive, negative, and neutral tweets. This has applications in tracking sentiment trends on brands, politics, and global events, automating sentiment classification in product reviews and support tickets, and understanding shifts in public perception and sentiment over time.
+                        </p>
+                </article>
+
+                <!-- Add more projects as needed -->
+            </section>
+        </main>
+    </div>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +6,11 @@
     font-family: Arial, sans-serif;
 }
 
-/* Layout */
-body {
+/* Two-column layout */
+.container {
     display: flex;
     height: 100vh;
+    overflow: hidden; /* Prevent extra scrolling on the whole page */
 }
 
 /* Sidebar (Left Section) */
@@ -20,14 +21,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centers content vertically */
     position: fixed;
     height: 100vh;
-    overflow-y: auto;
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Enables scrolling if content exceeds height */
+    border-right: 2px solid #ddd;
+    text-align: center; /* Centers text */
 }
 
 .profile img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
@@ -59,8 +65,8 @@ body {
     margin-left: 30%;
     width: 70%;
     padding: 2rem;
-    overflow-y: auto;
     height: 100vh;
+    overflow-y: auto; /* This makes the right section scrollable */
 }
 
 .content h2 {
@@ -68,6 +74,7 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Project Card Styles */
 .project {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
@@ -93,7 +100,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
+    .container {
         flex-direction: column;
     }
 
@@ -101,7 +108,8 @@ body {
         width: 100%;
         height: auto;
         position: relative;
-        padding: 1rem;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
     }
 
     .content {
