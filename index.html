@@ -1,37 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Coding Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link to your CSS file if you have one -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Coding Portfolio</h1>
-    <p>Discover my projects and coding adventures.</p>
+  <!-- Header / Navigation -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">Your Name</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <h3>Project Title 1</h3>
-        <p>A brief description of Project 1.</p>
-        <a href="https://github.com/username/project1" target="_blank">View on GitHub</a>
-      </li>
-      <li>
-        <h3>Project Title 2</h3>
-        <p>A brief description of Project 2.</p>
-        <a href="https://github.com/username/project2" target="_blank">View on GitHub</a>
-      </li>
-      <!-- Add more projects as needed -->
-    </ul>
+  <!-- Home Section -->
+  <section id="home" class="section home-section">
+    <div class="container">
+      <div class="home-content">
+        <!-- Replace 'your-image.jpg' with your own picture -->
+        <img src="your-image.jpg" alt="Your Name" class="profile-pic" />
+        <h1>Hello, I'm Your Name</h1>
+        <p>
+          Welcome to my personal portfolio. I'm a passionate developer and designer,
+          excited to share my work with you.
+        </p>
+      </div>
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>
+          This is a short introduction about yourself. You can mention your background,
+          interests, and what motivates you to create and code. Customize this section
+          with your own story!
+        </p>
+      </div>
+    </div>
   </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <!-- Replace 'project1.jpg' with a screenshot or image for your project -->
+          <img src="project1.jpg" alt="Project 1" />
+          <div class="project-info">
+            <h3>Project One</h3>
+            <p>A brief description of your first project goes here.</p>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <!-- Replace 'project2.jpg' with your project image -->
+          <img src="project2.jpg" alt="Project 2" />
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p>A brief description of your second project goes here.</p>
+          </div>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Your Name</p>
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
