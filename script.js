@@ -14,5 +14,5 @@ function showAbout() {
     document.getElementById("projects-tab").classList.remove("active");
 }
 
-// Set default view
+// Set default view on page load
 document.addEventListener("DOMContentLoaded", showProjects);

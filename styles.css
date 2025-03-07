@@ -66,7 +66,7 @@
     width: 70%;
     padding: 2rem;
     height: 100vh;
-    overflow-y: auto; /* Enables independent scrolling for projects */
+    overflow-y: auto; /* Enables independent scrolling */
 }
 
 /* Tab Header */
@@ -96,7 +96,7 @@
     background: #ccc;
 }
 
-/* Projects and About Sections */
+/* Sections */
 #projects-section, #about-section {
     margin-top: 1rem;
 }
@@ -104,49 +104,4 @@
 /* Initially hide About Me section */
 .hidden {
     display: none;
-}
-
-/* Project Card Styles */
-.project {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.project a {
-    text-decoration: none;
-    color: #007acc;
-    font-weight: bold;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
-.project img {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 0.5rem;
-    border-radius: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 2px solid #ddd;
-    }
-
-    .content {
-        width: 100%;
-        margin-left: 0;
-        height: auto;
-    }
 }
