@@ -5,7 +5,7 @@ const nextConfig = {
   // Remove these two:
   // basePath: '/milburnj.github.io',
   // assetPrefix: '/milburnj.github.io/',
-  //trailingSlash: true,
+  trailingSlash: true,
 };
 
 export default nextConfig;
