@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build && python -c \"open('out/.nojekyll','a').close()\"",
+    "deploy": "npm run predeploy && gh-pages -d out"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
@@ -21,9 +20,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.4.2",
-    "tailwindcss": "^4"
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   }
 }
