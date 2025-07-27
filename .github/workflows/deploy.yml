@@ -1,9 +1,4 @@
-# .github/workflows/deploy.yml
 name: Build & Deploy to GitHub Pages
-
-# Give the runner permission to push commits
-permissions:
-  contents: write
 
 on:
   push:
@@ -13,6 +8,9 @@ on:
       - 'docs/**'
       - '.github/workflows/deploy.yml'
 
+permissions:
+  contents: write
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -21,7 +19,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          persist-credentials: true  # keep the GITHUB_TOKEN auth
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,9 +38,13 @@ jobs:
         run: |
           rm -rf docs
           mv out docs
+
+      - name: Disable Jekyll
+        run: |
+          # Create an empty .nojekyll at the root of docs
           python -c "open('docs/.nojekyll','a').close()"
 
-      - name: Commit & push to main
+      - name: Commit & push docs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
