@@ -1,10 +1,10 @@
 // src/data/blog.js
 export default [
   {
-    slug: 'seafloor-insights',
-    title: 'Seafloor Segmentation Insights',
-    excerpt: 'How U-Net helped us classify seabed habitats from sonar imagery…',
-    url: '/blog/seafloor-insights'
+    slug: 'website-announcement',
+    title: 'Website Announcement',
+    excerpt: 'Announcing the launch of my new portfolio website built with Next.js and Tailwind CSS.',
+    url: '/blog/website-announcement'
   },
   // …
 ];

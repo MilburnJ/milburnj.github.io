@@ -7,7 +7,10 @@ import projects from '../data/projects.json';
 export default function AllProjects() {
   const [query, setQuery] = useState('');
   const filtered = projects.filter((p) =>
-    p.title.toLowerCase().includes(query.toLowerCase())
+    p.title.toLowerCase().includes(query.toLowerCase()) ||
+    (p.tools && p.tools.some(tool =>
+      tool.toLowerCase().includes(query.toLowerCase())
+    ))
   );
 
   return (
@@ -24,7 +27,7 @@ export default function AllProjects() {
   <div className="max-w-xl mx-auto mb-8">
     <input
       type="text"
-      placeholder="Search projects…"
+      placeholder="Search by name or tool…"
       value={query}
       onChange={(e) => setQuery(e.target.value)}
       className="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none"

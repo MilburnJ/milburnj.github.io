@@ -1,0 +1,42 @@
+---
+title: "Portfolio Rebuild Complete!"
+date: "2025-07-27"
+---
+<br />
+I’m thrilled to announce that my portfolio site has undergone a major overhaul and is now live! Over the past few weeks, I immersed myself in the latest frontend technologies, UX best practices, and DevOps workflows to deliver a fast, accessible, and maintainable personal site.
+<br />
+## Key Highlights
+<br />
+- **App Router & File‑based Layouts**  
+  Leveraged Next.js App Router to define nested layouts, dynamic routes, and static generation with `generateStaticParams`. Organized key sections (Hero, Skills, Projects, Blog, Contact) as full‑screen snaps using Tailwind’s scroll‑snap utilities.
+<br />
+- **Server vs. Client Components**  
+  Architected MDX rendering so that file I/O and frontmatter parsing happen in Server Components, while interactive UI (`MDXRemote`, `react‑icons`, `ScrollIndicator`) lives in a lightweight client wrapper.
+<br />
+- **MDX Content Pipeline**  
+  Used `gray‑matter` to parse frontmatter and `next‑mdx‑remote` to serialize and hydrate MDX, enabling custom components for headings, code blocks, and callouts.
+<br />
+- **Tailwind CSS & UI Polishing**  
+  Crafted a sleek dark theme: responsive layouts with Flexbox and Grid, explicit image/embed dimensions to prevent layout shifts. Added a typewriter animation for the Hero tagline and a clickable section navigation menu.
+<br />
+- **Contact Form & Email Integration**  
+  Integrated Formspree for serverless form handling, adding a hidden `_replyto` field to receive visitor emails directly—inbox‑ready without a backend.
+<br />
+- **Accessibility & Performance**  
+  Ensured semantic HTML, ARIA attributes, and keyboard navigation. Achieved Lighthouse scores above 90 for Performance, Accessibility, Best Practices, and SEO.
+<br />
+<br />
+## Tech Stack
+<br />
+- **Framework**: Next.js (App Router)  
+- **Styling**: Tailwind CSS  
+- **Content**: MDX (`next‑mdx‑remote`, `gray‑matter`)  
+- **Forms**: Formspree  
+- **Hosting**: GitHub Pages
+<br />
+<br />
+## What’s Next
+<br />
+I plan to add more projects, blog posts, and iteractive components as I continue my computer science journey. I’d love your feedback—browse the projects, dive into the blog, or send a message via the Contact section.
+
+---

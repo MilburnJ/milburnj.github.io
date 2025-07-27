@@ -12,7 +12,7 @@ export default function FeaturedProjects() {
     >
       <div className="h-full flex flex-col justify-between">
         {/* Title at the top */}
-        <h2 className="mt-24 text-3xl font-bold text-center">
+        <h2 className="mt-24 text-3xl font-bold text-center mb-4">
           Featured Projects
         </h2>
 
