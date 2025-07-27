@@ -1,4 +1,5 @@
-name: Build & Deploy to GitHub Pages
+# .github/workflows/deploy.yml
+name: Build & Deploy Next.js to GitHub Pages
 
 on:
   push:
@@ -9,20 +10,19 @@ on:
       - '.github/workflows/deploy.yml'
 
 permissions:
-  contents: write
+  contents: read        # for checkout
+  pages: write          # to publish Pages
+  id-token: write       # if you ever use OIDC
 
 jobs:
-  build_and_deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-          fetch-depth: 0
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
@@ -31,23 +31,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (export static into out/)
+      - name: Build (Next.js export → out/)
         run: npm run build
 
       - name: Prepare docs folder
         run: |
           rm -rf docs
           mv out docs
-
-      - name: Disable Jekyll
-        run: |
-          # Create an empty .nojekyll at the root of docs
           python -c "open('docs/.nojekyll','a').close()"
 
-      - name: Commit & push docs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
-          git commit -m "chore: deploy static site [skip ci]" || echo "No changes to commit"
-          git push origin main
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
