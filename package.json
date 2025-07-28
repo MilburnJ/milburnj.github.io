@@ -2,12 +2,12 @@
   "name": "milburnj.github.io",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "predeploy": "npm run build && node -e \"require('fs').writeFileSync('out/.nojekyll','')\"",
-  "deploy": "gh-pages -d out -m \"chore: deploy site\""
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node -e \"require('fs').writeFileSync('out/.nojekyll','')\"",
+    "predeploy": "npm run build && node -e \"const fs = require('fs'); fs.rmSync('docs', { recursive: true, force: true }); fs.cpSync('out', 'docs', { recursive: true }); fs.writeFileSync('docs/.nojekyll', '');\"",
+    "deploy": "npm run predeploy && git add -f docs && git commit -m \"chore: deploy site\" && git push -f origin main"
+  },
 
   "dependencies": {
     "gh-pages": "^6.3.0",
