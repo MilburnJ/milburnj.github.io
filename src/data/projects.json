@@ -1,5 +1,30 @@
 [
   {
+  "title": "FathomNetScaling: Performance Evaluation on Marine Datasets",
+  "description": "This project evaluates how deep learning models scale on the FathomNet dataset, using PyTorch and the FathomNet API to analyze bounding box coverage, class distribution, and training feasibility across varying dataset sizes and taxa.",
+  "image": "/fathomnet.png",
+  "url": "https://github.com/MilburnJ/FathomNetScaling",
+  "tools": ["Python", "PyTorch", "OpenCV", "Matplotlib","Convolutional Neural Networks (CNNs)"],
+  "featured": false
+},
+    {
+    "title": "RFdiffusion Generative Evaluation",
+    "description": "RFdiffusion is a denoising diffusion model built on RoseTTAFold that generates protein backbone structures under structural and functional constraints. This project explores unconditional generation, symmetric oligomer design, and hotspot-guided binder creation.",
+    "image": "/rfdiffusion.png",
+    "url": "https://github.com/MilburnJ/rfdiffusion",
+    "tools": [
+    "Python",
+    "PyTorch",
+    "RFdiffusion",
+    "ProteinMPNN",
+    "AlphaFold",
+    "Deep Graph Library",
+    "NumPy",
+    "Matplotlib"
+    ],
+    "featured": false
+  },
+  {
     "title": "Seafloor Sediment Segmentation with U-Net",
     "description": "This project implements a deep learning pipeline for semantic segmentation of seafloor images using a U-Net architecture with a ResNet backbone. The model predicts 17 classes of sediment and substrate types based on RGB images and accompanying bathymetry data.",
     "image": "/seafloorimg.png",
@@ -19,22 +44,77 @@
   "featured": true
   },
   {
-    "title": "RFdiffusion Generative Evaluation",
-    "description": "RFdiffusion is a denoising diffusion model built on RoseTTAFold that generates protein backbone structures under structural and functional constraints. This project explores unconditional generation, symmetric oligomer design, and hotspot-guided binder creation.",
-    "image": "/rfdiffusion.png",
-    "url": "https://github.com/MilburnJ/rfdiffusion",
-    "tools": [
-    "Python",
-    "PyTorch",
-    "RFdiffusion",
-    "ProteinMPNN",
-    "AlphaFold",
-    "Deep Graph Library",
-    "NumPy",
-    "Matplotlib"
-    ],
+  "title": "Chess Move-Based Win Prediction using RNN-GRU",
+  "description": "This project uses a GRU-based recurrent neural network to predict the winner of a chess game (white or black) using only the sequence of moves played.",
+  "image": "/chess-prediction.png",
+  "url": "https://github.com/MilburnJ/chess-win-predictor",
+  "tools": ["Python", "TensorFlow", "Keras", "NumPy", "Pandas", "Recurrent Neural Networks (RNNs)", "GRU"],
+  "featured": true
+},
+{
+  "title": "X Sentiment Analysis with BERT",
+  "description": "This project fine-tunes a BERT model to classify tweets from X (formerly Twitter) into positive, negative, or neutral sentiments. It leverages transfer learning and pretrained embeddings to achieve over 92% accuracy on a curated dataset of ~70,000 tweets.",
+  "image": "/x-sentiment.png",
+  "url": "https://github.com/MilburnJ/xsentimentanalysis",
+  "tools": ["Python", "PyTorch", "Transformers", "BERT", "Hugging Face", "NumPy", "Pandas", "scikit-learn","NLP (Natural Language Processing)"],
+  "featured": true
+},
+  {
+    "title": "Neural Network from Scratch: Linear Regression",
+    "description": "This project implements a simple feedforward neural network using only NumPy to learn the linear function y = 2x + 1. It demonstrates forward and backward propagation, gradient descent, and visualizes the network’s predictions versus the true function.",
+    "image": "/nn_regression.png",
+    "url": "https://github.com/MilburnJ/2layerNN",
+    "tools": ["Python", "NumPy", "Matplotlib", "scikit-learn"],
+    "featured": false
+},
+  {
+  "title": "POS and NER Tagging with CRF and BERT",
+  "description": "This project compares CRF and BERT models for Part-of-Speech tagging and Named Entity Recognition. It evaluates trade-offs in training time, accuracy, and complexity using the Penn Treebank and CoNLL-2003 datasets.",
+  "image": "/pos-ner-tagging.png",
+  "url": "https://github.com/MilburnJ/bert-pos-ner-tagging",
+  "tools": ["Python", "NLTK", "scikit-learn", "Transformers", "BERT", "Hugging Face", "PyTorch","NLP (Natural Language Processing)"],
+  "featured": false
+},
+{
+  "title": "Image Convolution with Neural Networks",
+  "description": "This project implements and compares multiple CNN-based architectures on the CIFAR-100 dataset, including a custom CNN, a fully convolutional network (FCN), and a fine-tuned VGG16 model using transfer learning.",
+  "image": "/cnn-convolution.png",
+  "url": "https://github.com/MilburnJ/image-convolution-with-nns",
+  "tools": ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "scikit-learn", "CNN", "Transfer Learning"],
+  "featured": false
+},
+{
+  "title": "Image Transformation and Feature Detection",
+  "description": "This project applies geometric transformations (rotation, scaling, shearing) to an image and uses OpenCV to detect edges and corners. It demonstrates preprocessing steps like CLAHE, Gaussian blur, bilateral filtering, and feature extraction using Canny edge detection and Harris corner detection.",
+  "image": "/edge-detection.png",
+  "url": "https://github.com/MilburnJ/edge-and-corner-detection",
+  "tools": ["Python", "OpenCV", "NumPy", "Matplotlib","Computer Vision"],
+  "featured": false
+},
+{
+  "title": "Image Blending and Mosaicking with Gaussian and Laplacian Pyramids",
+  "description": "This project implements multiresolution image processing using Gaussian and Laplacian pyramids for image reduction, expansion, reconstruction, and seamless mosaicking through pyramid blending techniques.",
+  "image": "/pyramid-blending.png",
+  "url": "https://github.com/MilburnJ/image-blending-mosaicking",
+  "tools": ["Python", "OpenCV", "NumPy", "Image Pyramids", "Laplacian Blending", "Image Mosaicking"],
+  "featured": false
+},
+  {
+    "title": "Optimizing Matrix Multiplication",
+    "description": "Computer architecture reveals hidden performance layers beyond the CPU—like caches, prefetching, and GPUs. To explore these, we optimized matrix multiplication through successive improvements.",
+    "image": "/matrix_multiplication.png",
+    "url": "https://github.com/MilburnJ/matrix_optimization",
+    "tools": ["C++", "CUDA", "cuBLAS", "OpenBLAS", "Nsight Compute", "High Performance Computing (HPC)"],
     "featured": false
   },
+{
+  "title": "gymsocial: iOS Fitness Social App",
+  "description": "gymsocial is a SwiftUI-based fitness social app that allows users to log workouts, visualize muscle group activity, and share progress in a social feed. It integrates Firebase for authentication, Firestore data storage, and image handling.",
+  "image": "/gymsocial.png",
+  "url": "https://github.com/MilburnJ/gymsocial",
+  "tools": ["Swift", "Firebase", "iOS"],
+  "featured": false
+},
   {
     "title": "Parallelizing Image Convolution Filters in C",
     "description": "This project implements a set of image convolution filters in C, with the goal of parallelizing a baseline serial implementation. It focuses on applying parallel programming techniques to image processing tasks.",
@@ -52,14 +132,6 @@
     "featured": false
   },
   {
-    "title": "Optimizing Matrix Multiplication",
-    "description": "Computer architecture reveals hidden performance layers beyond the CPU—like caches, prefetching, and GPUs. To explore these, we optimized matrix multiplication through successive improvements.",
-    "image": "/matrix_multiplication.png",
-    "url": "https://github.com/MilburnJ/matrix_optimization",
-    "tools": ["C++", "CUDA", "cuBLAS", "OpenBLAS", "Nsight Compute", "High Performance Computing (HPC)"],
-    "featured": false
-  },
-  {
     "title": "Sudoku Solver",
     "description": "This project implements a constraint-based Sudoku solver in Python. It solves standard 9x9 puzzles using backtracking and rule enforcement logic defined in a modular structure.",
     "image": "/sudoku_solver.png",
@@ -67,14 +139,6 @@
     "tools": ["Python", "Constraint Programming"],
     "featured": false
   },
-  {
-    "title": "Neural Network from Scratch: Linear Regression",
-    "description": "This project implements a simple feedforward neural network using only NumPy to learn the linear function y = 2x + 1. It demonstrates forward and backward propagation, gradient descent, and visualizes the network’s predictions versus the true function.",
-    "image": "/nn_regression.png",
-    "url": "https://github.com/MilburnJ/2layerNN",
-    "tools": ["Python", "NumPy", "Matplotlib", "scikit-learn"],
-    "featured": false
-},
 {
     "title": "Doodler: Android Sketch App",
     "description": "Doodler is a simple Android drawing application built with Kotlin. It allows users to sketch freely on a canvas with configurable brush size, color, and opacity.",
@@ -89,70 +153,6 @@
   "image": "/movie_rating.png",
   "url": "https://github.com/MilburnJ/movie-rating-app",
   "tools": ["TypeScript", "React", "HTML", "CSS", "Node.js"],
-  "featured": false
-},
-{
-  "title": "FathomNetScaling: Performance Evaluation on Marine Datasets",
-  "description": "This project evaluates how deep learning models scale on the FathomNet dataset, using PyTorch and the FathomNet API to analyze bounding box coverage, class distribution, and training feasibility across varying dataset sizes and taxa.",
-  "image": "/fathomnet.png",
-  "url": "https://github.com/MilburnJ/FathomNetScaling",
-  "tools": ["Python", "PyTorch", "OpenCV", "Matplotlib","Convolutional Neural Networks (CNNs)"],
-  "featured": false
-},
-{
-  "title": "Chess Move-Based Win Prediction using RNN-GRU",
-  "description": "This project uses a GRU-based recurrent neural network to predict the winner of a chess game (white or black) using only the sequence of moves played.",
-  "image": "/chess-prediction.png",
-  "url": "https://github.com/MilburnJ/chess-win-predictor",
-  "tools": ["Python", "TensorFlow", "Keras", "NumPy", "Pandas", "Recurrent Neural Networks (RNNs)", "GRU"],
-  "featured": true
-},
-{
-  "title": "X Sentiment Analysis with BERT",
-  "description": "This project fine-tunes a BERT model to classify tweets from X (formerly Twitter) into positive, negative, or neutral sentiments. It leverages transfer learning and pretrained embeddings to achieve over 92% accuracy on a curated dataset of ~70,000 tweets.",
-  "image": "/x-sentiment.png",
-  "url": "https://github.com/MilburnJ/xsentimentanalysis",
-  "tools": ["Python", "PyTorch", "Transformers", "BERT", "Hugging Face", "NumPy", "Pandas", "scikit-learn","NLP (Natural Language Processing)"],
-  "featured": true
-},
-{
-  "title": "Image Transformation and Feature Detection",
-  "description": "This project applies geometric transformations (rotation, scaling, shearing) to an image and uses OpenCV to detect edges and corners. It demonstrates preprocessing steps like CLAHE, Gaussian blur, bilateral filtering, and feature extraction using Canny edge detection and Harris corner detection.",
-  "image": "/edge-detection.png",
-  "url": "https://github.com/MilburnJ/edge-and-corner-detection",
-  "tools": ["Python", "OpenCV", "NumPy", "Matplotlib","Computer Vision"],
-  "featured": false
-},
-{
-  "title": "POS and NER Tagging with CRF and BERT",
-  "description": "This project compares CRF and BERT models for Part-of-Speech tagging and Named Entity Recognition. It evaluates trade-offs in training time, accuracy, and complexity using the Penn Treebank and CoNLL-2003 datasets.",
-  "image": "/pos-ner-tagging.png",
-  "url": "https://github.com/MilburnJ/bert-pos-ner-tagging",
-  "tools": ["Python", "NLTK", "scikit-learn", "Transformers", "BERT", "Hugging Face", "PyTorch","NLP (Natural Language Processing)"],
-  "featured": false
-},
-{
-  "title": "Image Convolution with Neural Networks",
-  "description": "This project implements and compares multiple CNN-based architectures on the CIFAR-100 dataset, including a custom CNN, a fully convolutional network (FCN), and a fine-tuned VGG16 model using transfer learning.",
-  "image": "/cnn-convolution.png",
-  "url": "https://github.com/MilburnJ/image-convolution-with-nns",
-  "tools": ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "scikit-learn", "CNN", "Transfer Learning"],
-  "featured": false
-},
-{
-  "title": "Image Blending and Mosaicking with Gaussian and Laplacian Pyramids",
-  "description": "This project implements multiresolution image processing using Gaussian and Laplacian pyramids for image reduction, expansion, reconstruction, and seamless mosaicking through pyramid blending techniques.",
-  "image": "/pyramid-blending.png",
-  "url": "https://github.com/MilburnJ/image-blending-mosaicking",
-  "tools": ["Python", "OpenCV", "NumPy", "Image Pyramids", "Laplacian Blending", "Image Mosaicking"],
-  "featured": false
-},
-{
-  "title": "gymsocial: iOS Fitness Social App",
-  "description": "gymsocial is a SwiftUI-based fitness social app that allows users to log workouts, visualize muscle group activity, and share progress in a social feed. It integrates Firebase for authentication, Firestore data storage, and image handling.",
-  "image": "/gymsocial.png",
-  "url": "https://github.com/MilburnJ/gymsocial",
-  "tools": ["Swift", "Firebase", "iOS"],
   "featured": false
 },
 {
