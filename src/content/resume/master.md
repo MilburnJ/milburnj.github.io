@@ -58,7 +58,7 @@ workflow that keeps the numbers honest.
 ## Projects
 
 ### brain — agentic second brain (2026)
-Claude-operated personal knowledge system: a markdown + SQLite vault as the single source of truth, custom skills that capture meetings and run a job-search pipeline, a Next.js dashboard, and unattended scheduled automation.
+Claude-operated personal knowledge system: a markdown + SQLite vault as the single source of truth, custom skills that turn meeting transcripts into structured notes, tasks and project logs, a Next.js dashboard, and unattended scheduled automation.
 
 ### Seafloor sediment segmentation (2025)
 U-Net with ResNet backbones over seafloor imagery and bathymetry across 17 substrate classes; **IoU ≈ 0.74**. Paired with a FathomNet scaling study on underwater detection datasets.
