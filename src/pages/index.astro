@@ -21,7 +21,7 @@ const posts = (await getCollection("posts"))
 <Base>
   <!-- Hero -->
   <section class="rise">
-    <p class="font-mono text-sm text-accent">{site.availability}</p>
+    {site.eyebrow && <p class="font-mono text-sm text-accent">{site.eyebrow}</p>}
     <h1 class="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
       {site.name}
     </h1>
