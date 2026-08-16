@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@/layouts/Base.astro";
+import TimelineIsland from "@/components/islands/Timeline.tsx";
+
+const entries = (await getCollection("timeline")).map((e) => ({
+  date: e.data.date,
+  end: e.data.end,
+  title: e.data.title,
+  type: e.data.type,
+  project: e.data.project,
+  body: e.body?.trim() ?? "",
+}));
+---
+
+<Base
+  title="Timeline"
+  description="How Jakeb Milburn got here — roles, research, degrees and projects, in order."
+>
+  <header class="max-w-2xl">
+    <h1 class="text-3xl font-semibold tracking-tight text-ink">Timeline</h1>
+    <p class="mt-3 leading-relaxed text-ink-2">
+      Everything in order. Assembled from the actual record — repository history, research work
+      and coursework — rather than from memory.
+    </p>
+  </header>
+
+  <div class="mt-10">
+    <TimelineIsland client:load entries={entries} />
+  </div>
+</Base>

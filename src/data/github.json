@@ -1,0 +1,48 @@
+{
+  "user": "MilburnJ",
+  "snapshot_date": "2026-08-16",
+  "repos": [
+    {
+      "name": "gymsocial",
+      "description": "gymsocial is a social fitness app for iOS that lets users log workouts, track muscle group activity, and share progress with friends. Built with SwiftUI and Firebase, it combines workout logging with social features to create a motivating experience for lifters.",
+      "url": "https://github.com/MilburnJ/gymsocial",
+      "language": "Swift",
+      "pushed_at": "2025-08-07"
+    },
+    {
+      "name": "milburnj.github.io",
+      "description": "This is a personal portfolio website built with Next.js and deployed via GitHub Pages. It showcases machine learning and software engineering projects, skills, and experience. The site is designed to be fast, responsive, and developer-friendly, using modern frameworks and build tooling.",
+      "url": "https://github.com/MilburnJ/milburnj.github.io",
+      "language": "HTML",
+      "pushed_at": "2025-07-29"
+    },
+    {
+      "name": "XSentimentAnalysis",
+      "description": "This project presents a BERT-based deep learning model for sentiment classification on social media data from X (formerly Twitter). It fine-tunes a pretrained BERT encoder to accurately classify tweets into one of three sentiment classes: positive, negative, or neutral.",
+      "url": "https://github.com/MilburnJ/XSentimentAnalysis",
+      "language": "Jupyter Notebook",
+      "pushed_at": "2025-07-27"
+    },
+    {
+      "name": "SeafloorSegmentation",
+      "description": "This project implements a deep learning pipeline for semantic segmentation of seafloor images using a U-Net architecture with a ResNet backbone. The model predicts 17 classes of sediment and substrate types based on RGB images and accompanying bathymetry data.",
+      "url": "https://github.com/MilburnJ/SeafloorSegmentation",
+      "language": "Jupyter Notebook",
+      "pushed_at": "2025-07-27"
+    },
+    {
+      "name": "image-blending-mosaicking",
+      "description": "This project implements core multiresolution image processing techniques using Gaussian and Laplacian pyramids, including image reduction, expansion, reconstruction, and blending. It also performs seamless image mosaicking using pyramid-based blending.",
+      "url": "https://github.com/MilburnJ/image-blending-mosaicking",
+      "language": "Python",
+      "pushed_at": "2025-07-27"
+    },
+    {
+      "name": "image-convolution-with-nns",
+      "description": "This project explores image classification using convolutional neural networks (CNNs), including both custom-built architectures and transfer learning with pretrained models. The experiments are conducted on the CIFAR-100 dataset and demonstrate the effectiveness of CNN-based feature extraction for image recognition.",
+      "url": "https://github.com/MilburnJ/image-convolution-with-nns",
+      "language": "Jupyter Notebook",
+      "pushed_at": "2025-07-27"
+    }
+  ]
+}

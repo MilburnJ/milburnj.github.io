@@ -1,0 +1,71 @@
+---
+import Base from "@/layouts/Base.astro";
+import site from "@/data/site.json";
+import about from "@/data/about.json";
+---
+
+<Base title="About" description={site.description}>
+  <header class="max-w-2xl">
+    <h1 class="text-3xl font-semibold tracking-tight text-ink">About</h1>
+  </header>
+
+  <div class="prose mt-8">
+    <Fragment set:html={about.html} />
+  </div>
+
+  {
+    about.now.length > 0 && (
+      <section class="mt-14 max-w-2xl">
+        <h2 class="text-sm font-semibold tracking-tight text-ink">Right now</h2>
+        <ul class="mt-4 flex flex-col gap-2.5">
+          {about.now.map((item: string) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-ink-2">
+              <span class="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+              <span set:html={item} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <section class="mt-14 max-w-2xl">
+    <h2 class="text-sm font-semibold tracking-tight text-ink">Get in touch</h2>
+    <p class="mt-3 text-sm leading-relaxed text-ink-2">
+      Email is best: <a class="text-accent hover:underline" href={`mailto:${site.email}`}>{site.email}</a>.
+      I'm also on <a class="text-accent hover:underline" href={site.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+      and <a class="text-accent hover:underline" href={site.links.github} target="_blank" rel="noopener">GitHub</a>.
+    </p>
+
+    <form
+      class="mt-6 flex max-w-md flex-col gap-3"
+      action={`https://formspree.io/f/${site.formspree_id}`}
+      method="POST"
+    >
+      <label class="flex flex-col gap-1.5">
+        <span class="text-xs text-muted">Your email</span>
+        <input
+          type="email"
+          name="email"
+          required
+          class="rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink outline-none focus:border-accent"
+        />
+      </label>
+      <label class="flex flex-col gap-1.5">
+        <span class="text-xs text-muted">Message</span>
+        <textarea
+          name="message"
+          rows="4"
+          required
+          class="rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink outline-none focus:border-accent"
+        ></textarea>
+      </label>
+      <button
+        type="submit"
+        class="self-start rounded-lg bg-accent px-4 py-2 text-sm font-medium text-canvas transition-opacity hover:opacity-90"
+      >
+        Send
+      </button>
+    </form>
+  </section>
+</Base>

@@ -1,0 +1,17 @@
+{
+  "classes": [
+    "cat",
+    "fish",
+    "house",
+    "tree",
+    "car",
+    "star",
+    "sun",
+    "bicycle",
+    "umbrella",
+    "eye"
+  ],
+  "val_accuracy": 0.8888,
+  "params": 30506,
+  "trained": "2026-08-16"
+}

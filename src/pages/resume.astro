@@ -1,0 +1,66 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "@/layouts/Base.astro";
+import site from "@/data/site.json";
+
+const entries = await getCollection("resume");
+const doc = entries[0];
+const rendered = doc ? await render(doc) : null;
+const Content = rendered?.Content;
+---
+
+<Base
+  title="Résumé"
+  description={`Résumé of ${site.name} — ${site.role}. ${site.description}`}
+>
+  <header class="no-print flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <h1 class="text-3xl font-semibold tracking-tight text-ink">Résumé</h1>
+      {
+        doc?.data.updated && (
+          <p class="mt-2 font-mono text-xs text-muted">updated {doc.data.updated}</p>
+        )
+      }
+    </div>
+    <div class="flex gap-3">
+      <a
+        href="/resume.pdf"
+        class="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-canvas transition-opacity hover:opacity-90"
+      >
+        Download PDF
+      </a>
+      <button
+        onclick="window.print()"
+        class="rounded-lg border border-edge px-4 py-2 text-sm text-ink transition-colors hover:border-ink"
+      >
+        Print
+      </button>
+    </div>
+  </header>
+
+  <!-- Print header: the PDF needs the contact block the site chrome normally provides. -->
+  <div class="hidden print:block">
+    <h1 class="text-2xl font-semibold">{site.name}</h1>
+    <p class="mt-1 text-sm">
+      {site.role} · {site.email} · {site.phone} · {site.location}
+    </p>
+    <p class="text-sm">
+      {site.links.linkedin.replace("https://www.", "")} · {site.links.github.replace("https://", "")} · {site.url.replace("https://", "")}
+    </p>
+  </div>
+
+  <article class="prose print-tight mt-10 max-w-3xl print:mt-4">
+    {Content ? <Content /> : <p class="text-muted">Résumé content has not been synced yet.</p>}
+  </article>
+</Base>
+
+<style is:global>
+  /* The site chrome already shows name + links; the markdown's own header would duplicate it
+     on screen. In print we hide the markdown header and use the block above instead. */
+  @media print {
+    .prose h1:first-of-type,
+    .prose h1:first-of-type + p {
+      display: none;
+    }
+  }
+</style>

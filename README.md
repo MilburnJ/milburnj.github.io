@@ -1,24 +1,27 @@
 # milburnj.github.io
 
-This is a personal portfolio website built with Next.js and deployed via GitHub Pages. It showcases machine learning and software engineering projects, skills, and experience. The site is designed to be fast, responsive, and developer-friendly, using modern frameworks and build tooling.
+Personal site of Jakeb Milburn — https://milburnj.github.io
 
-## Features
+**Content in `src/content/**` and `src/data/*.json` is generated. Do not edit it here.**
+It is rendered from the `brain` vault (`projects/`, `career/`, `history/`) by
+`scripts/portfolio_sync.py` in that repo, via the `/portfolio sync` skill. Editing a project
+description or a résumé bullet here will be overwritten on the next sync — change it in the
+vault instead.
 
-- Built with Next.js 14+ using the App Router
-- Modular component-based layout with React and Tailwind CSS
-- Clean project showcase with JSON-based metadata
-- GitHub-hosted and deployable via GitHub Pages
-- Fully responsive and SEO-friendly
+What *is* edited here: layouts, components, styles, the ML demo, and the build/deploy setup.
 
-## Deployment
+## Stack
 
-Visit: https://milburnj.github.io
+Astro 5 (static) · React islands · Tailwind v4 · MDX · deployed to GitHub Pages by Actions.
 
-## Tech Stack
+## Commands
 
-- Next.js 14
-- React 18
-- Tailwind CSS
-- GitHub Pages
-- ESLint, Prettier
+    npm run dev          # local dev server
+    npm run build        # static build into dist/
+    npm run preview      # serve the build
+    npm run resume-pdf   # render /resume to public/resume.pdf via headless Edge/Chrome
 
+## Deploying
+
+Push to `main`. The workflow in `.github/workflows/deploy.yml` builds and publishes.
+Repo setting required once: **Settings → Pages → Source = GitHub Actions**.

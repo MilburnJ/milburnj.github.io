@@ -1,30 +1,32 @@
 {
   "name": "milburnj.github.io",
-  "version": "0.1.0",
+  "type": "module",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && node -e \"require('fs').writeFileSync('out/.nojekyll','')\"",
-    "predeploy": "npm run build && node -e \"const fs = require('fs'); fs.rmSync('docs', { recursive: true, force: true }); fs.cpSync('out', 'docs', { recursive: true }); fs.writeFileSync('docs/.nojekyll', '');\"",
-    "deploy": "npm run predeploy && git add -f docs && git commit -m \"chore: deploy site\" && git push -f origin main"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "resume-pdf": "node scripts/resume-pdf.mjs"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
-    "gray-matter": "^4.0.3",
-    "next": "15.4.2",
-    "next-mdx-remote": "^5.0.0",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-icons": "^5.5.0",
-    "react-simple-typewriter": "^5.0.1"
+    "@astrojs/mdx": "^4.3.7",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/rss": "^4.0.14",
+    "@astrojs/sitemap": "^3.7.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.6",
+    "onnxruntime-web": "^1.24.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.1.11",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.2",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
+    "@astrojs/check": "^0.9.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
   }
 }

@@ -1,0 +1,126 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@/layouts/Base.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import GitHubActivity from "@/components/islands/GitHubActivity.tsx";
+import SketchDemo from "@/components/islands/SketchDemo.tsx";
+import site from "@/data/site.json";
+import github from "@/data/github.json";
+
+const projects = await getCollection("projects");
+const featured = projects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const posts = (await getCollection("posts"))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.localeCompare(a.data.date))
+  .slice(0, 2);
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="rise">
+    <p class="font-mono text-sm text-accent">{site.availability}</p>
+    <h1 class="mt-4 text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+      {site.name}
+    </h1>
+    <p class="mt-3 text-xl font-medium tracking-tight text-ink-2 sm:text-2xl">
+      {site.role}
+    </p>
+    <p class="mt-6 max-w-2xl text-base leading-relaxed text-ink-2">
+      {site.pitch}
+    </p>
+    <div class="mt-8 flex flex-wrap items-center gap-3">
+      <a
+        href="/projects"
+        class="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-canvas transition-opacity hover:opacity-90"
+      >
+        See the work
+      </a>
+      <a
+        href="/resume"
+        class="rounded-lg border border-edge px-4 py-2 text-sm text-ink transition-colors hover:border-ink"
+      >
+        Résumé
+      </a>
+      <a
+        href={`mailto:${site.email}`}
+        class="px-2 py-2 text-sm text-muted transition-colors hover:text-ink"
+      >
+        {site.email}
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured work -->
+  {
+    featured.length > 0 && (
+      <section class="mt-20">
+        <div class="mb-6 flex items-baseline justify-between gap-3">
+          <h2 class="text-sm font-semibold tracking-tight text-ink">Selected work</h2>
+          <a href="/projects" class="text-xs text-muted hover:text-accent">
+            all projects →
+          </a>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          {featured.slice(0, 4).map((p) => (
+            <ProjectCard project={p} featured />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <!-- In-browser ML demo -->
+  <section class="mt-20">
+    <div class="mb-5">
+      <h2 class="text-sm font-semibold tracking-tight text-ink">Try a model I trained</h2>
+      <p class="mt-1.5 max-w-2xl text-sm leading-relaxed text-ink-2">
+        Rather than describe the computer-vision work, here is some of it running. Draw
+        something — the classifier is a small CNN I trained on Quick, Draw!, exported to ONNX,
+        executing in your browser.
+      </p>
+    </div>
+    <SketchDemo client:visible />
+  </section>
+
+  <!-- Activity -->
+  <section class="mt-20">
+    <GitHubActivity
+      client:visible
+      snapshot={github.repos}
+      snapshotDate={github.snapshot_date}
+      user={github.user}
+    />
+  </section>
+
+  <!-- Writing -->
+  {
+    posts.length > 0 && (
+      <section class="mt-20">
+        <div class="mb-5 flex items-baseline justify-between gap-3">
+          <h2 class="text-sm font-semibold tracking-tight text-ink">Writing</h2>
+          <a href="/writing" class="text-xs text-muted hover:text-accent">
+            all posts →
+          </a>
+        </div>
+        <ul class="flex flex-col divide-y divide-line border-y border-line">
+          {posts.map((post) => (
+            <li>
+              <a href={`/writing/${post.id}`} class="group flex flex-col gap-1 py-4">
+                <div class="flex items-baseline justify-between gap-4">
+                  <span class="font-medium text-ink group-hover:text-accent">
+                    {post.data.title}
+                  </span>
+                  <span class="shrink-0 font-mono text-xs text-muted">{post.data.date}</span>
+                </div>
+                <span class="text-sm text-muted">{post.data.summary}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</Base>
