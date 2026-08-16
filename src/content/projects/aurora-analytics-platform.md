@@ -4,7 +4,7 @@ summary: Operational analytics platform over a SQL reporting warehouse - utiliza
 started: "2025-12"
 status: active
 featured: true
-order: 2
+order: 5
 tools:
   - TypeScript
   - Next.js

@@ -4,7 +4,7 @@ summary: An agent-native hosting platform — deploy the small apps agents write
 started: "2026-07"
 status: paused
 featured: true
-order: 5
+order: 7
 tools:
   - TypeScript
   - Python

@@ -5,7 +5,7 @@ started: "2026-04-22"
 ended: "2026-06-04"
 status: paused
 featured: true
-order: 4
+order: 2
 tools:
   - Swift
   - SwiftUI
