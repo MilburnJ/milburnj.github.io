@@ -1,16 +1,43 @@
 ---
+import { Image } from "astro:assets";
 import Base from "@/layouts/Base.astro";
 import site from "@/data/site.json";
 import about from "@/data/about.json";
+
+// The portrait is synced from the vault. Glob-import it so astro:assets can optimize it,
+// while tolerating its absence - a vault without an avatar must still build.
+const avatars = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/avatar.{webp,jpg,jpeg,png}",
+  { eager: true }
+);
+const avatar = Object.values(avatars)[0]?.default;
 ---
 
 <Base title="About" description={site.description}>
-  <header class="max-w-2xl">
-    <h1 class="text-3xl font-semibold tracking-tight text-ink">About</h1>
-  </header>
+  <div class="flex flex-col-reverse gap-8 sm:flex-row-reverse sm:items-start sm:gap-10">
+    {
+      avatar && (
+        <figure class="shrink-0">
+          <Image
+            src={avatar}
+            alt={about.avatar_alt ?? site.name}
+            width={192}
+            height={192}
+            densities={[1, 2]}
+            loading="eager"
+            class="h-36 w-36 rounded-2xl border border-line object-cover sm:h-48 sm:w-48"
+          />
+          <figcaption class="mt-2.5 font-mono text-[11px] text-muted">{site.location}</figcaption>
+        </figure>
+      )
+    }
 
-  <div class="prose mt-8">
-    <Fragment set:html={about.html} />
+    <div class="min-w-0 flex-1">
+      <h1 class="text-3xl font-semibold tracking-tight text-ink">About</h1>
+      <div class="prose mt-6">
+        <Fragment set:html={about.html} />
+      </div>
+    </div>
   </div>
 
   {
