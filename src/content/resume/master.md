@@ -6,7 +6,7 @@ updated: "2026-08-16"
 # Jakeb Milburn
 
 **AI/ML Engineer**
-jakemil2114@gmail.com · 443-717-1721 · Wilmington, DE · [linkedin.com/in/jakeb-milburn](https://www.linkedin.com/in/jakeb-milburn-23401a208/) · [github.com/MilburnJ](https://github.com/MilburnJ) · [milburnj.github.io](https://milburnj.github.io)
+jakemil2114@gmail.com · 443-717-1721 · Baltimore, MD · [linkedin.com/in/jakeb-milburn](https://www.linkedin.com/in/jakeb-milburn-23401a208/) · [github.com/MilburnJ](https://github.com/MilburnJ) · [milburnj.github.io](https://milburnj.github.io)
 
 ## Summary
 

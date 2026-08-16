@@ -3,18 +3,18 @@
   "snapshot_date": "2026-08-16",
   "repos": [
     {
+      "name": "milburnj.github.io",
+      "description": "This is a personal portfolio website built with Next.js and deployed via GitHub Pages. It showcases machine learning and software engineering projects, skills, and experience. The site is designed to be fast, responsive, and developer-friendly, using modern frameworks and build tooling.",
+      "url": "https://github.com/MilburnJ/milburnj.github.io",
+      "language": "Astro",
+      "pushed_at": "2026-08-16"
+    },
+    {
       "name": "gymsocial",
       "description": "gymsocial is a social fitness app for iOS that lets users log workouts, track muscle group activity, and share progress with friends. Built with SwiftUI and Firebase, it combines workout logging with social features to create a motivating experience for lifters.",
       "url": "https://github.com/MilburnJ/gymsocial",
       "language": "Swift",
       "pushed_at": "2025-08-07"
-    },
-    {
-      "name": "milburnj.github.io",
-      "description": "This is a personal portfolio website built with Next.js and deployed via GitHub Pages. It showcases machine learning and software engineering projects, skills, and experience. The site is designed to be fast, responsive, and developer-friendly, using modern frameworks and build tooling.",
-      "url": "https://github.com/MilburnJ/milburnj.github.io",
-      "language": "HTML",
-      "pushed_at": "2025-07-29"
     },
     {
       "name": "XSentimentAnalysis",
