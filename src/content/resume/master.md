@@ -12,8 +12,8 @@ jakemil2114@gmail.com · 443-717-1721 · Baltimore, MD · [linkedin.com/in/jakeb
 
 Software engineer with an M.S. in Computer Science who ships across the stack. Production ML on
 Azure (document classification and extraction), the TypeScript analytics platform a company runs
-on, an iOS app on the App Store with OCR and subscriptions, agent tooling, and enough CUDA and MPI
-to know where the time goes. Comfortable owning the whole path — model, pipeline, deployment, UI,
+on, an iOS app on the App Store with OCR and subscriptions, and agent tooling. Comfortable owning
+the whole path — model, pipeline, deployment, UI,
 and the regression workflow that keeps the numbers honest.
 
 ## Skills
