@@ -60,6 +60,9 @@ workflow that keeps the numbers honest.
 ### brain — agentic second brain (2026)
 Claude-operated personal knowledge system: a markdown + SQLite vault as the single source of truth, custom skills that turn meeting transcripts into structured notes, tasks and project logs, a Next.js dashboard, and unattended scheduled automation.
 
+### Julienne — iOS app, App Store (2026)
+Cooking app built in SwiftUI: grocery-receipt scanning (OCR plus a normalization layer for thermal-print abbreviations) that builds a pantry, an LLM assistant that suggests meals from it, StoreKit 2 subscriptions, Supabase sync, and GitHub Actions CI for app, backend and site.
+
 ### Seafloor sediment segmentation (2025)
 U-Net with ResNet backbones over seafloor imagery and bathymetry across 17 substrate classes; **IoU ≈ 0.74**. Paired with a FathomNet scaling study on underwater detection datasets.
 
