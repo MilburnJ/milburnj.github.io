@@ -5,16 +5,16 @@ updated: "2026-08-16"
 
 # Jakeb Milburn
 
-**AI/ML Engineer**
+**Software Engineer**
 jakemil2114@gmail.com · 443-717-1721 · Baltimore, MD · [linkedin.com/in/jakeb-milburn](https://www.linkedin.com/in/jakeb-milburn-23401a208/) · [github.com/MilburnJ](https://github.com/MilburnJ) · [milburnj.github.io](https://milburnj.github.io)
 
 ## Summary
 
-AI/ML engineer with an M.S. in Computer Science who builds machine learning that runs in
-production. Ships document-intelligence pipelines on Azure, computer-vision models on real sensor
-data, and LLM/RAG systems — plus the TypeScript platforms and dashboards that make their output
-usable. Comfortable owning the whole path: model, pipeline, deployment, and the regression
-workflow that keeps the numbers honest.
+Software engineer with an M.S. in Computer Science who ships across the stack. Production ML on
+Azure (document classification and extraction), the TypeScript analytics platform a company runs
+on, an iOS app on the App Store with OCR and subscriptions, agent tooling, and enough CUDA and MPI
+to know where the time goes. Comfortable owning the whole path — model, pipeline, deployment, UI,
+and the regression workflow that keeps the numbers honest.
 
 ## Skills
 
@@ -22,6 +22,7 @@ workflow that keeps the numbers honest.
 - **Languages:** Python, TypeScript/JavaScript, Java, C#, C/C++, Swift, SQL, HTML/CSS
 - **Frameworks & libraries:** PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face Transformers, NumPy, Pandas, OpenCV, Next.js, React, Drizzle ORM
 - **Cloud & infrastructure:** Azure (Document Intelligence, Functions, Blob Storage, Key Vault, Bicep), AWS (SageMaker, Bedrock, Lambda, S3), GCP, PostgreSQL, SQL Server, Docker, GitHub Actions
+- **Mobile:** Swift/SwiftUI, StoreKit 2, React Native/Expo, Kotlin/Android
 - **Systems:** CUDA/cuBLAS, OpenMP, MPI, performance profiling (Nsight Compute)
 
 ## Experience

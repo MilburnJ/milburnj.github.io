@@ -1,9 +1,9 @@
 {
   "name": "Jakeb Milburn",
-  "role": "AI/ML Engineer",
-  "headline": "AI/ML Engineer — production ML on Azure · document intelligence · computer vision · LLM/RAG",
-  "pitch": "I build machine learning that runs in production — document-intelligence pipelines, computer-vision models and LLM/RAG systems — and the platforms and dashboards that make their output usable.",
-  "description": "I build machine learning that runs in production — document-intelligence pipelines, computer-vision models and LLM/RAG systems — and the platforms and dashboards that make their output usable.",
+  "role": "Software Engineer",
+  "headline": "Software Engineer — ships end to end across ML, mobile, cloud and systems",
+  "pitch": "I build and ship software end to end — an iOS app on the App Store, production ML pipelines on Azure, the analytics platform a company runs on, agent tooling, a mobile game, and the occasional CUDA kernel. I pick the stack the problem needs and take it all the way to people using it.",
+  "description": "I build and ship software end to end — an iOS app on the App Store, production ML pipelines on Azure, the analytics platform a company runs on, agent tooling, a mobile game, and the occasional CUDA kernel. I pick the stack the problem needs and take it all the way to people using it.",
   "email": "jakemil2114@gmail.com",
   "phone": "443-717-1721",
   "location": "Baltimore, MD",
@@ -50,8 +50,26 @@
     "CUDA",
     "High Performance Computing",
     "Docker",
-    "CI/CD"
+    "CI/CD",
+    "Software Engineer",
+    "Full-Stack Engineer",
+    "iOS Development",
+    "Swift",
+    "SwiftUI",
+    "React Native",
+    "Mobile Development",
+    "Kotlin",
+    "Node.js",
+    "Supabase",
+    "Infrastructure as Code",
+    "Bicep",
+    "Distributed Systems",
+    "Parallel Computing",
+    "OpenMP",
+    "MPI",
+    "Agentic AI",
+    "AI Agents"
   ],
   "formspree_id": "mnnzprva",
-  "eyebrow": "Production ML · computer vision · LLM tooling"
+  "eyebrow": "iOS · production ML · cloud · systems"
 }
