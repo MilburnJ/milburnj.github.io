@@ -29,8 +29,13 @@ a platform team.
 The design is **contract-first** — an app declares what it needs in a spec, and the control plane
 turns that into infrastructure rather than the other way around. An Azure control plane with
 Bicep infrastructure as code, Key Vault-backed configuration (with the ordering constraints that
-implies — some secret references cannot exist before the resources they point at), a workload
-runtime, and Playwright coverage of the auth/session path.
+implies — some secret references cannot exist before the resources they point at), a Fly.io
+workload plane, and Playwright coverage of the auth/session path.
+
+One service layer sits behind three adapters — a REST API, a typed client, and an MCP server — so
+an agent deploying an app and a human clicking one go through the same code, with a cross-adapter
+conformance suite proving they stay in step. A `plat` CLI sits on top. August added the human
+half: a web dashboard, email-link auth, GitHub import, and Alembic migrations.
 
 Notable engineering judgement: the end-to-end suite was proven by *mutation* rather than assumed —
 deliberately breaking the credentials/CORS path to check whether the tests caught it. They didn't,
